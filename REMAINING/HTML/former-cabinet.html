@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Former Cabinet</title>
+       <link rel="stylesheet" href="/STYLES/style.css">
+    <link rel="stylesheet" href="/STYLES/utils.css">
+    <link rel="stylesheet" href="/STYLES/former-cabinets.css">
+    <link rel="stylesheet" href="/STYLES/timeline.css">
+    <link rel="stylesheet" href="/STYLES/gallery.css">
+    <!-- <link rel="stylesheet" href="/STYLES/enhanced-ui.css"> -->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head> 
+<body>
+    
+
+     <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">ICT Club</a>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#cabinet">Cabinet</a></li>
+                <li><a href="/HTML/former-cabinet.html">Former Cabinets</a></li>
+                <li><a href="/HTML/about-us.html">About Us</a></li>
+                <li><a href="/HTML/timeline.html">Events</a></li>
+                <li><a href="/HTML/gallery.html">Gallery</a></li>
+                <li><a href="/HTML/projects.html">Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Former Cabinets Section -->
+    <section id="former-cabinets" class="section">
+        <div class="container">
+            <h2>Former Cabinets</h2>
+            <div class="year-groups">
+                <!-- 2024 Cabinet -->
+                <div class="year-group">
+                    <button class="year-toggle flex items-center justify-between w-full" aria-expanded="false">
+                        <h3>Cabinet 2024</h3>
+                        <i class="fas fa-chevron-down transition"></i>
+                    </button>
+                    <div class="year-content" hidden>
+                        <div class="former-cabinet-grid">
+                            <!-- Placeholder members for 2024 -->
+                            <div class="former-member-card">
+                                <div class="member-image">
+                                    <img src="https://ui-avatars.com/api/?name=Alex+Turner&background=3b82f6&color=fff&size=150" alt="President 2024" loading="lazy">
+                                </div>
+                                <div class="member-info">
+                                    <h4>President</h4>
+                                    <p>Alex Turner</p>
+                                </div>
+                            </div>
+                            <!-- Add more members as needed -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Founding Cabinet 2015 -->
+                <div class="year-group founding-cabinet">
+                    <button class="year-toggle flex items-center justify-between w-full" aria-expanded="false">
+                        <h3>Founding Cabinet 2015</h3>
+                        <i class="fas fa-chevron-down transition"></i>
+                    </button>
+                    <div class="year-content" hidden>
+                        <div class="former-cabinet-grid">
+                            <div class="former-member-card founding-member">
+                                <div class="member-image">
+                                    <img src="https://ui-avatars.com/api/?name=James+Wilson&background=ca8a04&color=fff&size=200" alt="Founding President" loading="lazy">
+                                </div>
+                                <div class="member-info">
+                                    <h4>Founding President</h4>
+                                    <p>James Wilson</p>
+                                </div>
+                            </div>
+                            <!-- Add more founding members as needed -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<script src="/SCRIPTS/former-cabinets.js"></script>
+</body>
+</html>

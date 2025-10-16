@@ -1,0 +1,350 @@
+/* Timeline Layout */
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline-section {
+    margin-bottom: 4rem;
+}
+
+.timeline-heading {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 1.75rem;
+    margin-bottom: 3rem;
+}
+
+.timeline-container {
+    position: relative;
+}
+
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: var(--primary-light);
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+/* Timeline Items */
+.timeline-item {
+    position: relative;
+    width: calc(50% - 3rem); /* Adjust width to account for date box */
+    margin-bottom: 3rem;
+    opacity: 0;
+}
+
+.timeline-item.fade-in {
+    animation: fadeInSlide 0.6s ease forwards;
+}
+
+.timeline-item.left {
+    left: 0;
+    padding-right: 3rem;
+    margin-right: 3rem;
+}
+
+.timeline-item.right {
+    left: calc(50% + 3rem); /* Adjust position to prevent overlap */
+    padding-left: 3rem;
+    margin-left: 0;
+}
+
+/* Timeline Cards */
+.timeline-card {
+    position: relative;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: visible; /* Changed to visible to show date box */
+    transition: var(--transition);
+    padding-right: 120px; /* Space for date box on the right */
+}
+
+.timeline-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Timeline Dots */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: var(--primary-color);
+    border: 3px solid var(--white);
+    border-radius: 50%;
+    top: 20px;
+    transition: var(--transition);
+}
+
+.timeline-item:hover::before {
+    background: var(--accent-color);
+    transform: scale(1.2);
+}
+
+.timeline-item.left::before {
+    right: -8px;
+}
+
+.timeline-item.right::before {
+    left: -8px;
+}
+
+/* Date Box */
+.timeline-date {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    position: absolute;
+    top: 0;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1; /* Ensure date is above the card */
+    transition: var(--transition);
+}
+
+.timeline-item.left .timeline-date {
+    right: -120px; /* Increased spacing */
+}
+
+.timeline-item.right .timeline-date {
+    left: -120px; /* Increased spacing */
+}
+
+.timeline-date .day {
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.timeline-date .month {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0.25rem 0;
+}
+
+.timeline-date .year {
+    font-size: 0.875rem;
+    opacity: 0.9;
+}
+
+.past-event {
+    background: var(--light-text);
+}
+
+/* Content */
+.timeline-content {
+    padding: 1.5rem;
+    position: relative;
+    z-index: 0; /* Ensure content stays below date */
+}
+
+.timeline-content h4 {
+    color: var(--primary-dark);
+    font-size: 1.25rem;
+    margin: 0 0 1rem 0;
+    padding-right: 1rem; /* Prevent text from touching date box */
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.timeline-content p {
+    color: var(--light-text);
+    margin: 0 0 1rem 0;
+    line-height: 1.6;
+    padding-right: 1rem; /* Prevent text from touching date box */
+}
+
+/* Event Status Classes */
+.event-status {
+    font-size: 0.875rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.event-status i {
+    font-size: 0.75rem;
+}
+
+.event-status-ongoing {
+    background-color: #059669;
+    color: white;
+}
+
+.event-status-upcoming {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.event-status-completed {
+    background-color: #6b7280;
+    color: white;
+}
+
+.event-status-postponed {
+    background-color: #eab308;
+    color: white;
+}
+
+.event-status-cancelled {
+    background-color: #dc2626;
+    color: white;
+}
+
+/* Timeline End Point */
+.timeline-end {
+    position: relative;
+    padding-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.timeline-end::before {
+    content: '';
+    position: absolute;
+    top: -2rem;
+    width: 2px;
+    height: calc(100% - 2rem);
+    background: var(--primary-light);
+}
+
+.timeline-end-point {
+    width: 3rem;
+    height: 3rem;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.25rem;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 0 0.5rem rgba(37, 99, 235, 0.1);
+}
+
+/* Footer */
+.timeline-footer {
+    padding: 0.75rem 1.5rem;
+    background: var(--light-bg);
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.875rem;
+}
+
+.event-time,
+.event-location,
+.event-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--light-text);
+}
+
+.event-status.completed {
+    color: #059669;
+}
+
+/* Animations */
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.timeline-item.right.fade-in {
+    animation-name: fadeInSlideRight;
+}
+
+@keyframes fadeInSlideRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .timeline-container::after {
+        left: 0;
+    }
+
+    .timeline-item {
+        width: calc(100% - 2rem);
+        padding-left: 2rem;
+        margin: 0 0 2rem 0;
+    }
+
+    .timeline-item.left,
+    .timeline-item.right {
+        left: 0;
+        padding-right: 0;
+    }
+
+    .timeline-item::before {
+        left: -8px;
+    }
+
+    .timeline-card {
+        padding-right: 0;
+    }
+
+    .timeline-date {
+        position: relative;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+        position: relative;
+    }
+
+    .timeline-item.left .timeline-date,
+    .timeline-item.right .timeline-date {
+        position: relative;
+        margin-bottom: 1rem;
+    }
+
+    .timeline-content {
+        padding: 1.5rem;
+    }
+
+    .timeline-content h4,
+    .timeline-content p {
+        padding-right: 0;
+    }
+
+    .timeline-date .day,
+    .timeline-date .month,
+    .timeline-date .year {
+        font-size: 1rem;
+    }
+}
