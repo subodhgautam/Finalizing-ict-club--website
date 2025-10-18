@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../STYLES/former-cabinets.css">
     <link rel="stylesheet" href="../STYLES/timeline.css">
     <link rel="stylesheet" href="../STYLES/gallery.css">
+    <link rel="stylesheet" href="../STYLES/index-cabinet.css">
     <!-- <link rel="stylesheet" href="/STYLES/enhanced-ui.css"> -->
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -26,32 +27,33 @@
             </div>
             <ul class="nav-links">
                 <li><a href="index.html#cabinet">Cabinet</a></li>
-                <li><a href="/HTML/former-cabinet.html">Former Cabinets</a></li>
-                <li><a href="/HTML/about-us.html">About Us</a></li>
-                <li><a href="/HTML/timeline.html">Events</a></li>
-                <li><a href="/HTML/gallery.html">Gallery</a></li>
-                <li><a href="/HTML/projects.html">Projects</a></li>
+                <li><a href="../HTML/former-cabinet.html">Former Cabinets</a></li>
+                <li><a href="../HTML/about-us.html">About Us</a></li>
+                <li><a href="../HTML/timeline.html">Events</a></li>
+                <li><a href="../HTML/gallery.html">Gallery</a></li>
+                <li><a href="../HTML/projects.html">Projects</a></li>
             </ul>
         </div>
     </nav>
-
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-container">
             <h1>Welcome to ICT Club</h1>
             <p>Innovate. Create. Transform.</p>
-            <a href="#about" class="cta-button">Learn More</a>
+            <a href="../HTML/about-us.html" class="cta-button">Learn More</a>
         </div>
     </section>
-
     <!-- Cabinet Section -->
+  <!--
     <section id="cabinet" class="section">
         <div class="container">
             <h2>Current Cabinet 2025</h2>
             <div class="cabinet-grid">
                 <div class="member-card">
                     <div class="member-image">
-                        <!-- <img src="https://ui-avatars.com/api/?name=John+Doe&background=2563eb&color=fff&size=200" alt="President" loading="lazy"> -->
+                    --> 
+                    <!-- <img src="https://ui-avatars.com/api/?name=John+Doe&background=2563eb&color=fff&size=200" alt="President" loading="lazy"> -->
+                    <!--
                         <img src="https://ui-avatars.com/api/?name=Pratish+Subedi&background=2563eb&color=fff&size=200" alt="President" loading="lazy">
                     </div>
                     <h3>President</h3>
@@ -64,6 +66,7 @@
                     <h3>Vice President</h3>
                     <p>Sohan Ghimire</p>
                 </div>
+                --> 
                 <!-- <div class="member-card">
                     <div class="member-image">
                         <img src="https://ui-avatars.com/api/?name=Subodh+Gautam&background=2563eb&color=fff&size=200" alt="Vice President" loading="lazy">
@@ -71,6 +74,7 @@
                     <h3>Vice President</h3>
                     <p>Subodh Gautam</p>
                 </div> -->
+                <!--
                 <div class="member-card">
                     <div class="member-image">
                         <img src="https://ui-avatars.com/api/?name=Punya+Gautam&background=2563eb&color=fff&size=200" alt="Secretary" loading="lazy">
@@ -101,6 +105,19 @@
                 </div>
             </div>
         </div>
+    </section> -->
+
+<section id="team" class="team-section">
+        <div class="container">
+            <div class="header">
+                <h2>Meet The <span class="gradient-text">Team</span></h2>
+                <div class="divider"></div>
+                <p>This is our E.IT Club's Administrators who are dedicated to making this club one of the best out there.</p>
+            </div>
+            <div class="team-members" id="team-members-container">
+                <!-- Members will be dynamically added here using JS -->
+            </div>
+        </div>
     </section>
 
     <!-- Newsletter Section -->
@@ -109,10 +126,12 @@
             <h2>Stay Updated</h2>
             <form class="newsletter-form">
                 <input type="email" placeholder="Enter your email" required>
-                <button type="submit" class="cta-button">Subscribe</button>
+                <!-- <button type="submit" class="cta-button">Subscribe</button> -->
+                  <newsletter-button></newsletter-button>
             </form>
         </div>
     </section>
+   
 
     <!-- Footer -->
     <footer class="footer">
@@ -144,10 +163,13 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
-    <script src="former-cabinets.js"></script>
-    <script src="timeline.js"></script>
-    <script src="gallery.js"></script>
-    <script src="enhanced-ui.js"></script>
+    <script src="../SCRIPTS/script.js"></script>
+    <script src="../SCRIPTS/former-cabinets.js"></script>
+    <script src="../SCRIPTS/timeline.js"></script>
+    <script src="../SCRIPTS/gallery.js"></script>
+    <script src="../SCRIPTS/index-cabinet.js"></script>
+    <script src="../SCRIPTS/enhanced-ui.js"></script>
+    <script src="../SCRIPTS/newsletter-button.js"></script>
+
 </body>
 </html>
